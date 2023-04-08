@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alkatra", cursive;
+}
+:root {
+  --brimary-color: #2a4f75;
+  --input-color: #d3e2e4;
+  --btn-hover: #0e294d;
+}
+body {
+  background: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conatainer {
+  width: 400px;
+  height: 600px;
+  background-color: rgb(215, 248, 247, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgb(237, 161, 193, 1.5);
+  overflow: hidden;
+}
+
+.signup {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+label {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+input {
+  width: 70%;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+button {
+  width: 60%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--brimary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  background-color: var(--btn-hover);
+}
+button:active {
+  scale: 0.96;
+}
+
+.Login {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  background-color: #fff;
+  border-radius: 60% / 20%;
+  translate: 0px -90px;
+  transition: 0.5s ease-in-out;
+}
+
+.Login label {
+  color: var(--brimary-color);
+  scale: 0.6;
+  transition: 0.5s ease-in-out;
+
+}
+
+#hidden-btn {
+  display: none;
+}
+
+.Login input {
+  background-color: var(--input-color);
+  
+}
+#hidden-btn:checked ~ .Login {
+  translate: 0px -470px;
+}
+
+#hidden-btn:checked ~ .Login label {
+  scale: 1;
+}
